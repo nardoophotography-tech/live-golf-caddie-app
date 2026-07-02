@@ -96,7 +96,7 @@ export default function SatelliteHoleMap({
   const hasLayup = plan.length >= 3;
   const layupShot = hasLayup ? plan[plan.length - 2] : null;
   const layupPt = layupShot ? getPointOnPath(hole.distanceM - layupShot.totalM) : null;
-  const layupDistanceM = layupPt ? Math.round(getLength(ballPx, getPixel(layupPt)) * mPerPixel) : null;
+  const layupDistanceM = layupPt ? Math.round(getLength(ballPx, layupPt) * mPerPixel) : null;
 
   useEffect(() => {
     if (onVisualDistanceUpdate) onVisualDistanceUpdate(currentVisualDistanceM);
@@ -134,7 +134,7 @@ export default function SatelliteHoleMap({
   // Club plan labels, positioned by distance-from-green (shot.totalM)
   const clubLabels = plan.map((shot, i) => {
     const pt = getPointOnPath(hole.distanceM - shot.totalM);
-    return { ...shot, pct: getPct(getPixel(pt)), key: `${shot.club}-${i}` };
+    return { ...shot, pct: getPct(pt), key: `${shot.club}-${i}` };
   });
 
   const wind = windLabel(windDirection);
