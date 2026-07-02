@@ -45,25 +45,29 @@ export const mountIsaCourse: CourseHole[] = [
     mindset: 'Green in Regulation'
   },
   {
+    // Corrected 2026-07-02 per GolfTraxx (was wrongly Par 5 / 492yd).
+    // Source: https://golftraxx.com/hole-layout?coursename=Mount+Isa+Golf+Course&zipcode=4825&hole=2&static=true
     hole: 2,
-    par: 5,
-    distanceM: 450,
-    distanceYd: 492,
+    par: 3,
+    distanceM: 200,
+    distanceYd: 219,
+    si: 2,
     plan: [
-      { club: '3 Wood', carryM: 190, totalM: 200 },
-      { club: '3 Hybrid', carryM: 165, totalM: 175 },
-      { club: 'SW', carryM: 75, totalM: 75, note: 'layup distance' }
+      { club: '3 Wood', carryM: 190, totalM: 200, note: 'full tee shot' }
     ],
-    mindset: 'Green in Regulation'
+    mindset: 'Up-and-down mindset, play for leave'
   },
   {
+    // Corrected 2026-07-02 per GolfTraxx (was wrongly Par 4 / 372yd).
+    // Source: https://golftraxx.com/hole-layout?coursename=Mount+Isa+Golf+Course&zipcode=4825&hole=3&static=true
     hole: 3,
-    par: 4,
-    distanceM: 340,
-    distanceYd: 372,
+    par: 5,
+    distanceM: 425,
+    distanceYd: 465,
+    si: 18,
     plan: [
       { club: '3 Wood', carryM: 190, totalM: 200 },
-      { club: '7 Iron', carryM: 130, totalM: 140 }
+      { club: '3 Hybrid', carryM: 150, totalM: 160, note: 'soft 4H' }
     ],
     mindset: 'Green in Regulation'
   },
